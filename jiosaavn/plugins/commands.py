@@ -1,4 +1,5 @@
 import logging
+import random
 
 from jiosaavn.bot import Bot
 
@@ -7,9 +8,15 @@ from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineK
 
 logger = logging.getLogger(__name__)
 
+# Replace these with your actual image URLs
+PICS = "https://example.com/image1.jpg https://example.com/image2.png https://example.com/image3.jpeg"
+
 @Bot.on_callback_query(filters.regex('^home$'))
 @Bot.on_message(filters.command('start') & filters.private & filters.incoming)
 async def start_handler(cient: Bot, message: Message|CallbackQuery):
+    # Choose a random image URL from the PICS list
+    random_pic = random.choice(PICS.split())
+
     text = (
         f"**ʜᴇʟʟᴏ {message.from_user.mention},\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n"
         "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛɢ sᴘᴏᴛɪғʏ ʙᴏᴛ! "
@@ -31,9 +38,18 @@ async def start_handler(cient: Bot, message: Message|CallbackQuery):
         InlineKeyboardButton('sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🌐', url='https://t.me/MoggerKing')
     ]]
     if isinstance(message, Message):
-        await message.reply_text(text, reply_markup=InlineKeyboardMarkup(buttons), quote=True)
+        await message.reply_photo(
+            photo=random_pic,
+            caption=text,
+            reply_markup=InlineKeyboardMarkup(buttons),
+            quote=True
+        )
     else:
-        await message.message.edit(text, reply_markup=InlineKeyboardMarkup(buttons))
+        await message.message.edit_media(
+            media=random_pic,
+            caption=text,
+            reply_markup=InlineKeyboardMarkup(buttons)
+        )
 
 @Bot.on_callback_query(filters.regex('^help$'))
 @Bot.on_message(filters.command('help') & filters.private & filters.incoming)

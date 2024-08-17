@@ -52,7 +52,7 @@ async def settings(client: Bot, message: Message|CallbackQuery):
             InlineKeyboardButton(quality_160, callback_data='settings#quality#160kbps')
         ],
         [
-            InlineKeyboardButton("⇋ ʜᴏᴍᴇ ⇋, callback_data='home')
+            InlineKeyboardButton("⇋ ʜᴏᴍᴇ ⇋", callback_data="home")
         ]
     ]
 

@@ -45,11 +45,7 @@ async def start_handler(cient: Bot, message: Message|CallbackQuery):
             quote=True
         )
     else:
-        await message.message.edit_media(
-            media=random_pic,
-            caption=text,
-            reply_markup=InlineKeyboardMarkup(buttons)
-        )
+        await message.message.edit(text, reply_markup=InlineKeyboardMarkup(buttons))
 
 @Bot.on_callback_query(filters.regex('^help$'))
 @Bot.on_message(filters.command('help') & filters.private & filters.incoming)
@@ -82,10 +78,10 @@ async def about(client: Bot, message: Message|CallbackQuery):
 
     text = (
         f"**🤖 ᴍʏ ɴᴀᴍᴇ:** {me.mention()}\n\n"
-        "**📝 ʟᴀɴɢᴜᴀɢᴇ:** [Python 3](https://www.python.org/)\n\n"
-        "**🧰 ғʀᴀᴍᴇᴡᴏʀᴋ:** [Pyrogram](https://github.com/pyrogram/pyrogram)\n\n"
+        "**📝 ʟᴀɴɢᴜᴀɢᴇ:** [ᴘʏᴛʜᴏɴ 3](https://www.python.org/)\n\n"
+        "**🧰 ғʀᴀᴍᴇᴡᴏʀᴋ:** [ᴘʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)\n\n"
         "**👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ:** [ᴍᴏɢɢᴇʀ ᴋɪɴɢ](https://t.me/MoggerKing)\n\n"
-        "**🔗 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ: ᴘʀɪᴠᴀᴛᴇ ᴘʀᴏᴊᴇᴄᴛ! ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ʙᴜʏ, ᴘɪɴɢ ᴍᴇ ʜᴇʀᴇ** @MoggerKing\n\n"
+        "**🔗 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ: ᴘʀɪᴠᴀᴛᴇ ᴘʀᴏᴊᴇᴄᴛ! ʙᴜᴛ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ʙᴜʏ, ᴘɪɴɢ ᴍᴇ ʜᴇʀᴇ @MoggerKing**\n\n"
     )
 
     buttons = [[

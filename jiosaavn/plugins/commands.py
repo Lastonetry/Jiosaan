@@ -108,7 +108,7 @@ async def srcode(client: Bot, callback: CallbackQuery):
     ],[
         InlineKeyboardButton('ʜᴏᴍᴇ 🏠', callback_data='home')
     ]]
-        await message.message.edit(text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+    await message.message.edit(text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 @Bot.on_callback_query(filters.regex('^close$'))
 async def close_cb(client: Bot, callback: CallbackQuery):

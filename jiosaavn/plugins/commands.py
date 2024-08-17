@@ -9,7 +9,7 @@ from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineK
 logger = logging.getLogger(__name__)
 
 # Replace these with your actual image URLs
-PICS = "https://example.com/image1.jpg https://example.com/image2.png https://example.com/image3.jpeg"
+PICS = "https://telegra.ph/file/adef46f8e7942c6b9f324.jpg"
 
 @Bot.on_callback_query(filters.regex('^home$'))
 @Bot.on_message(filters.command('start') & filters.private & filters.incoming)

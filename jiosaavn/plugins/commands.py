@@ -11,14 +11,14 @@ logger = logging.getLogger(__name__)
 @Bot.on_message(filters.command('start') & filters.private & filters.incoming)
 async def start_handler(cient: Bot, message: Message|CallbackQuery):
     text = (
-        f"**ʜᴇʟʟᴏ {message.from_user.mention},\n\n"
+        f"**ʜᴇʟʟᴏ {message.from_user.mention},\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n"
         "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛɢ sᴘᴏᴛɪғʏ ʙᴏᴛ! "
-        "ᴛʜɪs ᴘᴏᴡᴇʀғᴜʟ ʙᴏᴛ ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ sᴇᴀʀᴄʜ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢs, ᴘʟᴀʏʟɪsᴛs, ᴀʟʙᴜᴍs ᴀɴᴅ ᴀʀᴛɪsᴛs ᴅɪʀᴇᴄᴛʟʏ ғʀᴏᴍ sᴘᴏᴛɪғʏ.\n\n"
+        "ᴛʜɪs ᴘᴏᴡᴇʀғᴜʟ ʙᴏᴛ ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ sᴇᴀʀᴄʜ ᴀɴᴅ ᴅᴏᴡɴʟᴏᴀᴅ sᴏɴɢs, ᴘʟᴀʏʟɪsᴛs, ᴀʟʙᴜᴍs ᴀɴᴅ ᴀʀᴛɪsᴛs ᴅɪʀᴇᴄᴛʟʏ ғʀᴏᴍ sᴘᴏᴛɪғʏ.\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n"
         "ᴡɪᴛʜ ᴛʜɪs ʙᴏᴛ, ʏᴏᴜ ᴄᴀɴ:\n"
         "- sᴇᴀʀᴄʜ ғᴏʀ sᴏɴɢs, ᴀʟʙᴜᴍs,  ᴘʟᴀʏʟɪsᴛs ᴀɴᴅ ᴀʀᴛɪsᴛs\n"
         "- ᴅᴏᴡɴʟᴏᴀᴅ ʏᴏᴜʀ ғᴀᴠᴏᴜʀɪᴛᴇ ᴛʀᴀᴄᴋ ᴅɪʀᴇᴄᴛʟʏ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ\n"
         "- ᴇxᴘʟᴏʀᴇ ᴠᴀʀɪᴏᴜs ғᴇᴀᴛᴜʀᴇs ᴛᴀɪʟᴏʀᴇᴅ ᴛᴏ ᴇɴʜᴀɴᴄᴇ ʏᴏᴜʀ ᴍᴜsɪᴄ ᴇxᴘᴇʀɪᴇɴᴄᴇ**\n\n"
-        "**⚡ ᴘᴏᴡᴇʀ ʜᴏᴜsᴇ:** [ᴍᴏɢɢᴇʀ ᴋɪɴɢ](https://t.me/MoggerKing)"
+        "**© ᴅᴇᴠ : __[ᴍᴏɢɢᴇʀ ᴋɪɴɢ](https://t.me/MoggerKing)__**"
     )
 
     buttons = [[

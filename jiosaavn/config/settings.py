@@ -2,7 +2,7 @@ from os import getenv
 
 API_ID = getenv("API_ID", "20937630")
 API_HASH = getenv("API_HASH", "3290b11b9246bff1ff44f13e9c7ffb45")
-BOT_TOKEN = getenv("BOT_TOKEN", "7366817195:AAHx2as_r3xxCG63lJ-ugdHihwVL_2xzGsA")
+BOT_TOKEN = getenv("BOT_TOKEN", "7350533162:AAExMOuqwEJyIK0IpszG3DBSkc_G8dvyrYY")
 BOT_COMMANDS = (
     ("start", "Initialize the bot and check its status"),
     ("settings", "Configure and manage bot settings"),

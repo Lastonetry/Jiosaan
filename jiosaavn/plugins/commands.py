@@ -35,7 +35,7 @@ async def start_handler(cient: Bot, message: Message|CallbackQuery):
         InlineKeyboardButton('💥 ʜᴇʟᴘ', callback_data='help'),
         InlineKeyboardButton('sᴇᴛᴛɪɴɢs ⚙', callback_data='settings')
         ],[
-        InlineKeyboardButton('sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🌐', url='https://t.me/MoggerKing')
+        InlineKeyboardButton('sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🌐', callback_data='srcode')
     ]]
     if isinstance(message, Message):
         await message.reply_photo(
@@ -94,6 +94,20 @@ async def about(client: Bot, message: Message|CallbackQuery):
     if isinstance(message, Message):
         await message.reply_text(text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True, quote=True)
     else:
+        await message.message.edit(text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+
+@Bot.on_callback_query(filters.regex('^srcode$'))
+async def srcode(client: Bot, callback: CallbackQuery):
+
+    text = (
+        f"**ᴛʜɪs ɪs ɴᴏᴛ ᴀɴ ᴏᴘᴇɴ-sᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ, ʜᴏᴡᴇᴠᴇʀ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʙᴜʏ ᴛʜᴇ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ, ᴘɪɴɢ ᴍᴇ ʜᴇʀᴇ @MoggerKing**"
+    )
+
+    buttons = [[
+        InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ ✅', url='https://t.me/MoggerKing')
+    ],[
+        InlineKeyboardButton('ʜᴏᴍᴇ 🏠', callback_data='home')
+    ]]
         await message.message.edit(text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 @Bot.on_callback_query(filters.regex('^close$'))
